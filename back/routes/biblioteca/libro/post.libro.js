@@ -5,11 +5,6 @@ const editorialModel = require('../../../models/editorial.model')
 const autorModel = require('../../../models/autor.model')
 
 
-
-
-
-
-
 app.post('/libro', (req, res) => {
 
     const body = req.body

@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "biblioteca"
+    }
+  },
+  "defaultProject": "biblioteca",
+  "cli": {
+    "analytics": false
+  }
 }
