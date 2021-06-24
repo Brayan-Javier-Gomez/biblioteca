@@ -1,1 +1,23 @@
 <p>books works!</p>
+
+
+<table class="default">
+
+    <tr>
+        <th>nombre</th>
+        <th>autor</th>
+        <th>año</th>
+    </tr>
+    <tr *ngFor="let libro of libros">
+        <td>
+            {{libro.title}}
+        </td>
+        <td>
+            {{libro.autor.name}}
+        </td>
+        <td>
+            {{libro.year}}
+        </td>
+    </tr>
+
+</table>

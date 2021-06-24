@@ -1,1 +1,20 @@
-<p>editorials works!</p>
+<table class="default">
+
+    <tr>
+        <th>nombre</th>
+        <th>autor</th>
+        <th>año</th>
+    </tr>
+    <tr *ngFor="let edit of editorial">
+        <td>
+            {{edit.name}}
+        </td>
+        <td>
+            {{edit.email}}
+        </td>
+        <td>
+            {{edit.adress}}
+        </td>
+    </tr>
+
+</table>

@@ -1,1 +1,23 @@
 <p>autors works!</p>
+
+
+<table class="default">
+
+    <tr>
+        <th>nombre</th>
+        <th>autor</th>
+        <th>año</th>
+    </tr>
+    <tr *ngFor="let autor of autors">
+        <td>
+            {{autor.name}}
+        </td>
+        <td>
+            {{autor.city}}
+        </td>
+        <td>
+            {{autor.email}}
+        </td>
+    </tr>
+
+</table>

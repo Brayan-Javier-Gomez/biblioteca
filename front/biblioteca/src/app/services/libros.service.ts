@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import { Libro } from '../models/libro.interfaz';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +17,8 @@ export class LibrosService {
 
 
 
-  getBooks(){
-    return this.http.get(this.url)
+  getBooks():Observable<Libro>{
+    return this.http.get<Libro>(this.url);
   }
 
 
