@@ -9,7 +9,7 @@ const libroSchema = new Schema({
         required: true
     },
     year: {
-        type: Number,
+        type: String,
         required: true
     },
     gender: {
