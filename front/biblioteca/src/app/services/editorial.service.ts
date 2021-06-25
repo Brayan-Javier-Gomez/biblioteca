@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class EditorialService {
 
-  url = 'http://localhost:3000/editorial'
+  url = 'https://biblioteca-brayan.herokuapp.com/editorial';
 
   constructor(private http: HttpClient) { }
 

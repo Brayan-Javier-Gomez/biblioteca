@@ -10,7 +10,7 @@ export class AutorService {
 
   // public autors;
 
-  url = 'http://localhost:3000/autor';
+  url = 'https://biblioteca-brayan.herokuapp.com/autor';
 
   constructor(private http: HttpClient) { }
 

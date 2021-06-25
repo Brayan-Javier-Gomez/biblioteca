@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class LibrosService {
 
   libros: any = [];
-  url = 'http://localhost:3000/'
+  url = 'https://biblioteca-brayan.herokuapp.com/';
 
   constructor(private http: HttpClient) {
 
