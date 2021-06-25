@@ -3,9 +3,10 @@
     <div class="col-auto">
 
         <div class="form-group mx-sm-3">
-            <input type="text" class="form-control rounded-pill " id="query" placeholder="titulo..." #input>
+            <input type="text" class="form-control rounded-pill mb-2" id="query" placeholder="titulo..." #input>
 
-            <button class="btn btn-primary text-center mb-2 rounded-pill" type="button" (click)='searchBook(input.value)' (keyup.enter)="searchBook(input.value)">Buscar</button>
+            <button class="btn btn-primary text-center mb-2 rounded-pill mr-2" type="button" (click)='searchBook(input.value)' (keyup.enter)="searchBook(input.value)">Buscar</button>
+            <button class="btn btn-success text-center mb-2 rounded-pill" type="button" routerLink='/biblioteca/libro'>Registrar</button>
 
         </div>
     </div>

@@ -26,3 +26,13 @@ export interface Libro {
         };
     }
 }
+
+export interface CreateLibro{
+    title: string;
+    year: string;
+    gender: string;
+    pages: number;
+    editorial: string;
+    autor: string;
+
+}

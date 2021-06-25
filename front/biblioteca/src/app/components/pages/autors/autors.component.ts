@@ -22,7 +22,6 @@ export class AutorsComponent implements OnInit {
   getAutors() {
     this.autorService.getAutors().subscribe((data: AutorModel) => {
       this.autors = data.autores;
-      console.log(this.autors);
     })
   }
 

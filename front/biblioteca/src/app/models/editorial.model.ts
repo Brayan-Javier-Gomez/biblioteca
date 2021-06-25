@@ -13,3 +13,12 @@ export interface EditorialModel {
 
     }
 }
+
+export interface Editorial{
+    name: string;
+    adress: string;
+    phone_number: number;
+    email: string;
+    max_limit: number;
+    libros: number;
+}

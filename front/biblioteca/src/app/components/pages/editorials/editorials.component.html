@@ -1,3 +1,7 @@
+<div>
+    <button class="btn btn-success text-center mb-2 rounded-pill" type="button" routerLink='/biblioteca/editorial'>Registrar</button>
+
+</div>
 <div class="row">
 
     <div class="col-auto mb-3" *ngFor="let edit of editorial">
@@ -8,7 +12,7 @@
 
                 <h5 class="card-title text-center text-bold mb-4">{{edit.name |titlecase}}</h5>
 
-                <h6 class="card-subtitle mb-2">Direcciob: {{edit.adress}}</h6>
+                <h6 class="card-subtitle mb-2">Direccion: {{edit.adress}}</h6>
                 <h6 class="card-subtitle mb-2">Telefono : {{edit.phone_number}}</h6>
                 <h6 class="card-subtitle mb-2">Email: {{edit.email}}</h6>
                 <h6 class="card-subtitle mb-2">Libros Registrados: {{edit.libros}}</h6>

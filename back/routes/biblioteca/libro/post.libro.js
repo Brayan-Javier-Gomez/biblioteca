@@ -14,31 +14,25 @@ app.post('/libro', (req, res) => {
 
 
         if (err) {
-            return res.status(400).json({
+            return res.json({
                 ok: false,
                 err: 'La editorial no esta registrada'
             })
         }
         if (!idEdit) {
-            return res.status(404).json({
+            return res.json({
                 ok: false,
                 message: 'La editorial no esta registrada '
             })
         }
 
         if (!idEdit[0]) {
-            return res.status(404).json({
+            return res.json({
                 ok: false,
                 message: 'La editorial no ha sido registrada'
             })
         }
 
-        if (idEdit[0].libros >= idEdit[0].max_limit && idEdit[0].max_limit != -1) {
-            return res.status(400).json({
-                ok: false,
-                message: 'No es posible agregar mas libros, se ha alcanzado el limite'
-            })
-        }
 
 
         let ed_id = idEdit[0]._id
@@ -46,11 +40,17 @@ app.post('/libro', (req, res) => {
         autorModel.find({ name: body.autor }, (err, autor) => {
 
             if (!autor[0]) {
-                return res.status(404).json({
+                return res.status(200).json({
                     ok: false,
                     message: 'El autor no ha sido registrado'
                 })
 
+            }
+            if (idEdit[0].libros >= idEdit[0].max_limit && idEdit[0].max_limit != -1) {
+                return res.json({
+                    ok: false,
+                    message: 'No es posible agregar mas libros, se ha alcanzado el limite'
+                })
             }
 
             let aut_id = autor[0]._id
@@ -88,9 +88,9 @@ app.post('/libro', (req, res) => {
                 }
 
                 if (!libro) {
-                    return res.status(400).json({
+                    return res.json({
                         ok: false,
-                        message: 'No se registro el libro'
+                        message: 'Ha ocurrido un error, no ha se registrado el libro'
                     })
                 }
 

@@ -23,7 +23,6 @@ export class EditorialsComponent implements OnInit {
   getEditorial() {
     this.edService.getEditorial().subscribe((data: EditorialModel) => {
       this.editorial = data.editoriales;
-      console.log(this.editorial);
     });
   }
 

@@ -21,5 +21,13 @@ export class AutorService {
   }
 
 
+  registerAutor(body){
+
+    return this.http.post(`${this.url}` , body);
+ 
+  }
+
+
+
 
 }

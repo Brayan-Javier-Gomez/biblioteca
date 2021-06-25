@@ -1,1 +1,71 @@
-<p>book works!</p>
+<h3>
+    Registro de libros
+</h3>
+
+<hr class="bg-success">
+
+<div class="container border border-dark rounded">
+
+
+    <form (ngSubmit)='registerBook(FormLibro)' class="form-row" #FormLibro="ngForm">
+
+        <div class="form-group mb-2 text-center col-12 mt-3">
+
+            <label for="exampleFormControlInput1" class="h5 text-center text-success">Titulo</label>
+
+            <input type="text" class="form-control border-primary" name="title" required [(ngModel)]='libro.title'>
+
+        </div>
+
+        <div class="form-group mb-2 text-center col-md-4 ">
+
+            <label for="exampleFormControlInput1" class="h5 text-center">Año de lanzamiento</label>
+
+            <input type="email" class="form-control border-primary" name="year" required [(ngModel)]='libro.year'>
+
+        </div>
+
+        <div class="form-group mb-2 col-md-4 text-center">
+
+            <label for="exampleFormControlInput1" class="h5 text-center">Genero</label>
+
+            <input type="email" class="form-control border-primary" name="gender" required [(ngModel)]='libro.gender'>
+
+        </div>
+
+        <div class="form-group mb-2 col-md-4 text-center">
+
+            <label for="exampleFormControlInput1" class="h5 text-center">No paginas</label>
+
+            <input type="email" class="form-control border-primary" name="pages" required [(ngModel)]='libro.pages'>
+
+        </div>
+
+        <div class="form-group mb-2 col-md-6 text-center ">
+
+            <label for="exampleFormControlInput1 " class="h5 text-center ">Nombre de editorial
+                
+        </label>
+
+            <input type="email " class="form-control border-primary " name="editorial " required [(ngModel)]='libro.editorial'>
+
+        </div>
+
+
+        <div class="form-group mb-4 col-md-6 text-center ">
+
+            <label for="exampleFormControlInput1 " class="h5 text-center ">Nombre autor</label>
+
+            <input type="email " class="form-control  border-primary " name="autor " required [(ngModel)]='libro.autor'>
+
+        </div>
+
+        <div class="text-center col-12 ">
+
+            <button class="btn btn-success mb-5 " type="submit ">Registrar</button>
+
+        </div>
+
+
+    </form>
+</div>

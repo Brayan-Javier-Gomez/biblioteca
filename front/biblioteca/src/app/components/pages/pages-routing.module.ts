@@ -4,6 +4,8 @@ import { BookComponent } from './book/book.component';
 import { BooksComponent } from './books/books.component';
 import { AutorsComponent } from './autors/autors.component';
 import { EditorialsComponent } from './editorials/editorials.component';
+import { AutorComponent } from './autor/autor.component';
+import { EditorialComponent } from './editorial/editorial.component';
 
 const routes: Routes = [
 
@@ -12,8 +14,10 @@ const routes: Routes = [
     children: [
       {path: 'libros', component: BooksComponent},
       {path: 'libro', component: BookComponent},
-      {path: 'autor', component: AutorsComponent},
-      {path: 'editorial', component: EditorialsComponent},
+      {path: 'autor', component: AutorComponent},
+      {path: 'autors', component: AutorsComponent},
+      {path: 'editorials', component: EditorialsComponent},
+      {path: 'editorial', component: EditorialComponent},
       {path: '**', redirectTo: 'libros', pathMatch: 'full'},
 
     ]

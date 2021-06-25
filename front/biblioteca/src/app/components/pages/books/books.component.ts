@@ -30,7 +30,6 @@ export class BooksComponent implements OnInit {
 
     this.libroService.getBooks().subscribe((data: Libro) => {
       this.libros = data.libros;
-      console.log(this.libros.length);
       if (this.libros.length > 0){
       this.estado = 'lleno';
       }else{

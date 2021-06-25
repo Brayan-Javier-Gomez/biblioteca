@@ -1,0 +1,52 @@
+<h3>
+    Registro de Autor
+</h3>
+
+<hr class="bg-success">
+
+<div class="container border border-dark rounded">
+
+
+    <form (ngSubmit)='registerAutor(FormLibro)' class="form-row" #FormLibro="ngForm">
+
+        <div class="form-group mb-2 text-center col-12 mt-3">
+
+            <label for="exampleFormControlInput1" class="h5 text-center text-success">Nombre</label>
+
+            <input type="text" class="form-control border-primary" name="name" required [(ngModel)]='autor.name'>
+
+        </div>
+
+        <div class="form-group mb-2 text-center col-md-4 ">
+
+            <label for="exampleFormControlInput1" class="h5 text-center">Año de nacimiento</label>
+
+            <input type="email" class="form-control border-primary" name="year" required [(ngModel)]='autor.year'>
+
+        </div>
+
+        <div class="form-group mb-2 col-md-4 text-center">
+
+            <label for="exampleFormControlInput1" class="h5 text-center">Ciudad de Nacimiento</label>
+
+            <input type="email" class="form-control border-primary" name="city" required [(ngModel)]='autor.city'>
+
+        </div>
+
+        <div class="form-group mb-2 col-md-4 text-center">
+
+            <label for="exampleFormControlInput1" class="h5 text-center">Email</label>
+
+            <input type="email" class="form-control border-primary" name="email" required [(ngModel)]='autor.email'>
+
+        </div>
+
+        <div class="text-center col-12 ">
+
+            <button class="btn btn-success mb-5 " type="submit ">Registrar</button>
+
+        </div>
+
+
+    </form>
+</div>

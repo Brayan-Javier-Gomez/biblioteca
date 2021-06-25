@@ -18,4 +18,8 @@ getEditorial():Observable<EditorialModel>{
   return this.http.get<EditorialModel>(this.url);
 }
 
+registerEditorial(body){
+  return this.http.post(`${this.url}`, body);
+}
+
 }

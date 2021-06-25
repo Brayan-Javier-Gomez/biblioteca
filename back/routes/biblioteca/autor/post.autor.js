@@ -24,7 +24,7 @@ app.post('/autor', (req, res) => {
         }
 
         if (!autor) {
-            return res.status(400).json({
+            return res.json({
                 ok: false,
                 err: {
                     message: "No se ha registrado el autor"

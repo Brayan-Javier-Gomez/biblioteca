@@ -1,0 +1,60 @@
+<h3>
+    Registro de Editorial
+</h3>
+
+<hr class="bg-success">
+
+<div class="container border border-dark rounded">
+
+
+    <form (ngSubmit)='registerEditorial(FormLibro)' class="form-row" #FormLibro="ngForm">
+
+        <div class="form-group mb-2 text-center col-12 mt-3">
+
+            <label for="exampleFormControlInput1" class="h5 text-center text-success">Nombre</label>
+
+            <input type="text" class="form-control border-primary" name="name" required [(ngModel)]='editorial.name'>
+
+        </div>
+
+        <div class="form-group mb-2 text-center col-12 ">
+
+            <label for="exampleFormControlInput1" class="h5 text-center">Direccion</label>
+
+            <input type="email" class="form-control border-primary" name="adress" required [(ngModel)]='editorial.adress'>
+
+        </div>
+
+        <div class="form-group mb-2 col-md-4 text-center">
+
+            <label for="exampleFormControlInput1" class="h5 text-center">Numero de telefono</label>
+
+            <input type="email" class="form-control border-primary" name="phone_number" required [(ngModel)]='editorial.phone_number'>
+
+        </div>
+
+        <div class="form-group mb-2 col-md-6 text-center">
+
+            <label for="exampleFormControlInput1" class="h5 text-center">Email</label>
+
+            <input type="email" class="form-control border-primary" name="email" required [(ngModel)]='editorial.email'>
+
+        </div>
+
+        <div class="form-group mb-2 col-md-2 text-center">
+
+            <label for="exampleFormControlInput1" class="h5 text-center">Limite</label>
+
+            <input type="email" class="form-control border-primary" name="max_limit" required [(ngModel)]='editorial.max_limit'>
+
+        </div>
+
+        <div class="text-center col-12 ">
+
+            <button class="btn btn-success mb-5 " type="submit ">Registrar</button>
+
+        </div>
+
+
+    </form>
+</div>

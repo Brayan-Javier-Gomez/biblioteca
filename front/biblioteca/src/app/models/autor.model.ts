@@ -11,3 +11,10 @@ export interface AutorModel{
         email: string;
     };
 }
+
+export interface Autor{
+    name: string;
+    year: string;
+    city: string;
+    email: string;
+}
