@@ -1,23 +1,18 @@
-<p>autors works!</p>
+<div class="row">
 
+    <div class="col-auto mb-3" *ngFor="let autor of autors">
 
-<table class="default">
+        <div class="card rounded" style="width: 18rem;">
 
-    <tr>
-        <th>nombre</th>
-        <th>autor</th>
-        <th>año</th>
-    </tr>
-    <tr *ngFor="let autor of autors">
-        <td>
-            {{autor.name}}
-        </td>
-        <td>
-            {{autor.city}}
-        </td>
-        <td>
-            {{autor.email}}
-        </td>
-    </tr>
+            <div class="card-body">
 
-</table>
+                <h5 class="card-title text-center text-bold mb-4">{{autor.name |titlecase}}</h5>
+
+                <h6 class="card-subtitle mb-2">Fecha nacimiento: {{autor.year}}</h6>
+                <h6 class="card-subtitle mb-2">Ciudad: {{autor.city}}</h6>
+                <h6 class="card-subtitle mb-2">Email: {{autor.email}}</h6>
+
+            </div>
+        </div>
+    </div>
+</div>
