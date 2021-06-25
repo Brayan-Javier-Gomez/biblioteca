@@ -4,11 +4,9 @@ const libroModel = require('../../../models/libro.model')
 
 
 
-app.get('/search', (req, res) => {
+app.get('/search/:query', (req, res) => {
 
-    let body = req.body;
-
-    query = body.query
+    query = req.params.query
 
     console.log(query);
 

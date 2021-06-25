@@ -1,23 +1,45 @@
-<p>books works!</p>
+<form class="form-row align-items-center">
+
+    <div class="col-auto">
+
+        <div class="form-group mx-sm-3">
+            <input type="text" class="form-control rounded-pill " id="query" placeholder="titulo..." #input>
+
+            <button class="btn btn-primary text-center mb-2 rounded-pill" type="button" (click)='searchBook(input.value)' (keyup.enter)="searchBook(input.value)">Buscar</button>
+
+        </div>
+    </div>
 
 
-<table class="default">
 
-    <tr>
-        <th>nombre</th>
-        <th>autor</th>
-        <th>año</th>
-    </tr>
-    <tr *ngFor="let libro of libros">
-        <td>
-            {{libro.title}}
-        </td>
-        <td>
-            {{libro.autor.name}}
-        </td>
-        <td>
-            {{libro.year}}
-        </td>
-    </tr>
 
-</table>
+</form>
+
+
+<div *ngIf="estado == 'vacio'">
+    <h3>
+        !!No se encontraron libros para esta busqueda!!
+    </h3>
+</div>
+
+
+
+<div class="row">
+
+    <div class="col-auto mb-3" *ngFor="let libro of libros">
+
+        <div class="card rounded" style="width: 18rem;">
+
+            <div class="card-body">
+
+                <h5 class="card-title text-center text-bold mb-4">{{libro.title}}</h5>
+
+                <h6 class="card-subtitle mb-2">Lanzamiento: {{libro.year}}</h6>
+                <h6 class="card-subtitle mb-2">Genero: {{libro.gender}}</h6>
+                <h6 class="card-subtitle mb-2">No. Paginas{{libro.pages}}</h6>
+                <h6 class="card-subtitle mb-2">Editorial: {{libro.editorial.name |titlecase}}</h6>
+                <h6 class="card-subtitle mb-2">Autor: {{libro.autor.name | titlecase}}</h6>
+            </div>
+        </div>
+    </div>
+</div>

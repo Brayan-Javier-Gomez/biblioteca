@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Libro } from '../models/libro.interfaz';
 import { Observable } from 'rxjs';
 
@@ -8,17 +8,26 @@ import { Observable } from 'rxjs';
 })
 export class LibrosService {
 
-  libros:any = [];
-  url = 'http://localhost:3000/libros'
+  libros: any = [];
+  url = 'http://localhost:3000/'
 
-  constructor(private http: HttpClient) { 
-  this.getBooks();
+  constructor(private http: HttpClient) {
+    this.getBooks();
   }
 
 
 
-  getBooks():Observable<Libro>{
-    return this.http.get<Libro>(this.url);
+  getBooks(): Observable<Libro> {
+    return this.http.get<Libro>(`${this.url}libros`);
+  }
+
+
+  searchBook(query: string): Observable<Libro> {
+
+
+    // const params = new HttpParams().set('query', query);
+
+    return this.http.get<Libro>(`${this.url}search/${query}`);
   }
 
 

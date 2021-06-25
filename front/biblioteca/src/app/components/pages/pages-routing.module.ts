@@ -14,7 +14,7 @@ const routes: Routes = [
       {path: 'libro', component: BookComponent},
       {path: 'autor', component: AutorsComponent},
       {path: 'editorial', component: EditorialsComponent},
-      {path: '**', redirectTo: 'libros'},
+      {path: '**', redirectTo: 'libros', pathMatch: 'full'},
 
     ]
   }

@@ -6,11 +6,11 @@ const libroSchema = new Schema({
 
     title: {
         type: String,
-        required: true
+
     },
     year: {
         type: String,
-        required: true
+
     },
     gender: {
         type: String,
